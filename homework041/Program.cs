@@ -55,9 +55,10 @@ void PrintArray(int[] array)
 int length = GetNumberFromConsole("Введите длину массива");
 int[] array = new int[length];
 int count = 0;
+
 for (int i = 0; i < array.Length; i++)
 {
-   array[i] = GetNumberFromConsole($"Введите {i+1} число");
+   array[i] = GetNumberFromConsole($"Введите {i + 1} число");
    if (array[i] > 0)
    {
       count++;

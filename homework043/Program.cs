@@ -46,7 +46,7 @@ else if (k1 == k2)
 }
 else
 {
-   double x = Math.Round(((b2 - b1) / (k1 - k2)),2);
-   double y = Math.Round((k1 * (b2 - b1)) / (k1 - k2) + b1,2);
+   double x = Math.Round(((b2 - b1) / (k1 - k2)), 2);
+   double y = Math.Round((k1 * (b2 - b1)) / (k1 - k2) + b1, 2);
    Console.WriteLine($"Точка пересечения двух прямых ({x}; {y})");
 }

@@ -10,7 +10,7 @@ x = (b2 - b1) / (k1 - k2)
 y = (k1 * (b2 - b1)) / (k1 - k2) + b1
 */
 
-// проверка что введено число
+
 int GetNumberFromConsole(string message)
 {
    bool isCorrect = false;
@@ -31,60 +31,22 @@ int GetNumberFromConsole(string message)
    return result;
 }
 
+double b1 = GetNumberFromConsole("введите b1");
+double k1 = GetNumberFromConsole("введите k1");
+double b2 = GetNumberFromConsole("введите b2");
+double k2 = GetNumberFromConsole("введите k2");
 
-int b1 = GetNumberFromConsole("введите b1");
-int k1 = GetNumberFromConsole("введите k1");
-int b2 = GetNumberFromConsole("введите b2");
-int k2 = GetNumberFromConsole("введите k2");
-
-int x = ((b2 - b1) / (k1 - k2));
-int y = (k1 * (b2 - b1)) / (k1 - k2) + b1;
-
-Console.WriteLine($"точка пересечения двух прямых ({x}; {y})");
-
-
-
-
-
-
+if ((k1 == k2) && (b1 == b2))
 {
-
-   float k1, b1;
-
-   float k2, b2;
-
-   float x, y;
-
-
-   cout << "k1,b1:";
-
-   cin >> k1 >> b1;
-
-   cout << "k2,b2:";
-
-   cin >> k2 >> b2;
-
-
-   if ((k1 == k2) && (b1 == b2))
-
-      cout << "Прямые совпадают";
-
-   else if (k1 == k2)
-
-      cout << "Прямые параллельны";
-
-   else
-
-   {
-
-      x = (b2 - b1) / (k1 - k2);
-
-      y = (k1 * (b2 - b1)) / (k1 - k2) + b1;
-
-      cout << "x=" << x << "y=" << y;
-
-   }
-
-   return 0;
-
+   Console.WriteLine("Прямые совпадают");
+}
+else if (k1 == k2)
+{
+   Console.WriteLine("Прямые параллельны, точек пересечения нет");
+}
+else
+{
+   double x = Math.Round(((b2 - b1) / (k1 - k2)),2);
+   double y = Math.Round((k1 * (b2 - b1)) / (k1 - k2) + b1,2);
+   Console.WriteLine($"Точка пересечения двух прямых ({x}; {y})");
 }
